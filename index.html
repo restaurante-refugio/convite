@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=teste, initial-scale=1.0">
+    <title>Convite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    
+    
+        <div id="container">
+        <img id="central-image" src="assets/rest.jpeg" alt="Imagem do convite">
+        <p id="pix">PIX: <span id="pix-code">restauranterefugiossa@gmail.com</span></p>
+        <button id="copy-btn">Copiar Pix</button>
+        </div>
+
+         <div id="popup">Código copiado!</div>
+
+
+        <script>
+    document.getElementById("copy-btn").addEventListener("click", function () {
+      const codigo = document.getElementById("pix-code").textContent;
+      navigator.clipboard.writeText(codigo).then(() => {
+        const popup = document.getElementById("popup");
+        popup.classList.add("show");
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 2000); 
+      });
+    });
+  </script>
+</body>
+</html>

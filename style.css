@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #faf1e8;
+  
+}
+
+#container {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#central-image{
+  width: 30%;
+}
+
+#pix {
+    font-size: 2.0rem;
+    color: #b28c0a;
+    font-style: sans-serif;
+}
+
+ #copy-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #9e7665;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    #copy-btn:hover {
+      background-color: #80533a;
+    }
+
+    #popup {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 10px 20px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    #popup.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+@media (min-width: 1920px) {
+
+  #central-image{
+  width: 20%;
+  height: 50%;
+
+}
+}
+
+@media (max-width: 1400px) {
+
+  #central-image{
+  width: 60%;
+  height: 50%;
+
+}
+
+ #pix {
+    font-size: 2rem;
+}
+  
+}
+
+
+@media (max-width: 900px) {
+
+  #central-image{
+  width: 80%;
+  height: 50%;
+}
+ #pix {
+    font-size: 1.4rem;
+}
+  
+}
+
+@media (max-width: 700px) {
+
+  #central-image{
+  width: 80%;
+
+}
+ #pix {
+
+  font-size: 1.2rem;
+}
+  
+}
+
+@media (max-width: 450px) {
+
+  #central-image{
+  width: 100%;
+
+}
+
+
+ #pix {
+
+  font-size: 1.1rem;
+}
+  
+}
